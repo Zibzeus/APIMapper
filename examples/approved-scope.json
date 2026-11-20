@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "rules": [
+    {
+      "effect": "include",
+      "url": "https://api.example.invalid/v1"
+    },
+    {
+      "effect": "exclude",
+      "url": "https://api.example.invalid/v1/health"
+    }
+  ]
+}

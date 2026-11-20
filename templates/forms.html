@@ -1,0 +1,3 @@
+{% macro token() %}<input type="hidden" name="csrf" value="{{csrf}}">{% endmacro %}
+{% macro field(k,label,value='',required=false,prefix='',typ='text') %}<label for="{{prefix}}{{k}}">{{label}}{% if required %} (required){% endif %}</label><input type="{{typ}}" id="{{prefix}}{{k}}" name="{{k}}" {% if typ!='file' %}value="{{value}}"{% endif %} {% if required %}required{% endif %}>{% endmacro %}
+{% macro anchor(p,r) %}<a href="/p/{{p.id}}/o/{{r.id}}">{{r.file}} · {{r.ref}}</a>{% endmacro %}

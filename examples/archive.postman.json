@@ -1,0 +1,39 @@
+{
+  "info": {
+    "name": "Examples",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "variable": [
+    {
+      "key": "origin",
+      "value": "https://api.example.invalid"
+    }
+  ],
+  "item": [
+    {
+      "name": "Receipts",
+      "item": [
+        {
+          "name": "Status",
+          "request": {
+            "method": "GET",
+            "url": "{{origin}}/v1/health",
+            "header": []
+          },
+          "response": [
+            {
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\"status\": \"example\"}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
